@@ -56,7 +56,7 @@ main {
 }
 
 .action-icon__rested {
-    opacity: 50%;
+    opacity: 20%;
 }
 
 .action-icon:hover {

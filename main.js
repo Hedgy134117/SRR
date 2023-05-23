@@ -31,6 +31,23 @@ async function loadActions() {
     for (let element of actionList.querySelectorAll(".button")) {
         element.addEventListener("click", (e) => addAction(e.target));
     }
+
+    loadActionsFromLocal();
+}
+
+function loadActionsFromLocal() {
+    let actionNames = [];
+    for (let val in window.localStorage) {
+        if (val.includes("SRR")) {
+            actionNames.push(val.split("-")[1]);
+        }
+    }
+
+    for (let action of document.querySelectorAll(".action")) {
+        if (actionNames.includes(action.querySelector(".action__title").innerText)) {
+            action.querySelector(".button").click();
+        }
+    }
 }
 
 function useAction(actionHTML) {
@@ -71,6 +88,8 @@ function addAction(actionHTML) {
     actionHTML.querySelector(".button").removeEventListener("click", addAction);
     actionHTML.querySelector(".button").addEventListener("click", (e) => removeAction(actionHTML));
     actionHTML.querySelector(".button").querySelector("span").innerText = "-";
+
+    saveActionToLocal(actionHTML.querySelector(".action__title").innerText);
 }
 
 function removeAction(actionHTML) {
@@ -84,6 +103,8 @@ function removeAction(actionHTML) {
     actionHTML.querySelector(".button").removeEventListener("click", removeAction);
     actionHTML.querySelector(".button").addEventListener("click", (e) => addAction(actionHTML));
     actionHTML.querySelector(".button").querySelector("span").innerText = "+";
+
+    removeActionFromLocal(actionHTML.querySelector(".action__title").innerText);
 }
 
 
@@ -119,6 +140,14 @@ function reinvigorate() {
             toggleAction(actionIcon);
         }
     }
+}
+
+function saveActionToLocal(actionName) {
+    window.localStorage.setItem("SRR-" + actionName, "1");
+}
+
+function removeActionFromLocal(actionName) {
+    window.localStorage.removeItem("SRR-" + actionName);
 }
 
 window.onload = async () => {
