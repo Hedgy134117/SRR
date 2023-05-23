@@ -1,0 +1,296 @@
+{
+    "Light Dodge": {
+        "users": "Greed, Lust, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat/Reaction",
+        "type": "Light",
+        "description": "1 per attack; when attacked, you may add half of your craftiness stat to your defense."
+    },
+    "Heavy Dodge": {
+        "users": "Lust, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat/Reaction",
+        "type": "Light",
+        "description": "1 per attack; when attacked, you may add your craftiness stat to your defense."
+    },
+    "I've seen that one before! ": {
+        "users": "Lust, Envy, Gluttony",
+        "category": "Combat/Reaction",
+        "type": "Heavy",
+        "description": "If an entirety targets you for an attack with an item, if that entity has hit with that item before during this combat, you may nullify that attack."
+    },
+    "Let's see how you guys like it!": {
+        "users": "Greed, Lust, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat/Reaction",
+        "type": "Light",
+        "description": "Immediately after you are dealt damage by an attack, you may activate this ability. If you do, for the first attack on your turn, you may add half your craftiness stat to your offensive power, equal to the number of damage you were dealt."
+    },
+    "Brain beats Brawn! ": {
+        "users": "Greed, Lust, Gluttony",
+        "category": "Combat/Reaction",
+        "type": "Light",
+        "description": "When anyone is attacked, If your craftiness is higher than your opponent's current attack, you may subtract their current attack by half your craftiness."
+    },
+    "Natural Battle Instincts Activate! ": {
+        "users": "Wrath, Sloth, Pride",
+        "category": "Combat/Passive",
+        "type": "",
+        "description": "If you have taken damage this round, your defensive power is increased by half of your craftiness."
+    },
+    "You'll pay for what you've done! ": {
+        "users": "Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "Target an enemy that has dealt damage to you in this combat. If your craftiness stat is greater than theirs, your next attack has its lethality doubled! (After the resolution of your other abilities)"
+    },
+    "Using Muscles to their fullest extent!! ": {
+        "users": "Lust, Wrath, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "For the rest of your attacks this turn, you may add your craftiness stat to your offensive power."
+    },
+    "Feel the heat of battle! ": {
+        "users": "Lust, Wrath, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "For the rest of your attacks this turn, you may add your craftiness stat to your offensive power."
+    },
+    "Unleash Magic! ": {
+        "users": "Lust, Wrath, Envy, Gluttony",
+        "category": "Combat",
+        "type": "Light",
+        "description": "For the duration of your next action, you may increase your sin connection by half of your craftiness stat."
+    },
+    "Downloaded! ": {
+        "users": "Greed, Lust, Envy, Gluttony",
+        "category": "Utility",
+        "type": "Light",
+        "description": "Choose a target, you may know the Craftiness stat of that target."
+    },
+    "How much longer till I kill you? ": {
+        "users": "Greed, Lust, Sloth, Envy, Gluttony",
+        "category": "Utility",
+        "type": "Light",
+        "description": "Choose a target, you may know the Health stat and current damage. of that target."
+    },
+    "Voice Mimicry": {
+        "users": "Greed, Lust, Envy, Gluttony",
+        "category": "Utility",
+        "type": "",
+        "description": "You can mimic any voice you've heard pretty much perfectly."
+    },
+    "Slow and Silent": {
+        "users": "Greed, Lust, Sloth, Envy, Gluttony",
+        "category": "Utility",
+        "type": "",
+        "description": "You can sneak completely undetected."
+    },
+    "The Ultimate Climber": {
+        "users": "Greed, Lust, Wrath, Gluttony, Pride",
+        "category": "Utility/Passive",
+        "type": "",
+        "description": "You pass all climbing checks."
+    },
+    "The Ultimate Swimmer": {
+        "users": "Greed, Lust, Wrath, Gluttony, Pride",
+        "category": "Utility/Passive",
+        "type": "",
+        "description": "You pass all swimming checks."
+    },
+    "The Ultimate Rider": {
+        "users": "Greed, Wrath, Lust, Gluttony, Pride",
+        "category": "Utility/Passive",
+        "type": "",
+        "description": "You pass all Riding checks."
+    },
+    "Barrage!!! ": {
+        "users": "Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "You can make perform 2 “attacks” abilities from any light item you have active. (unaffected by Pride's doubling/halfing ability)"
+    },
+    "A bit of self-reflection. ": {
+        "users": "Lust, Sloth, Gluttony",
+        "category": "Combat",
+        "type": "Light",
+        "description": "1 per turn. If you missed an attack this turn, your next attack this turn gains your craftiness to its offensive power."
+    },
+    "There's more left in store!": {
+        "users": "Greed, Sloth, Gluttony",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "If you have two or more invigorated actions after activating this ability, you may add half your craftiness to your next attack this turn."
+    },
+    "My Final Ultimate Move is coming up next! ": {
+        "users": "Wrath, Envy ",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "If your craftiness is greater than your target's craftiness, your next attack this turn hits that target regardless of defense. You may not use this ability on your next turn."
+    },
+    "Let's see if you can tango!": {
+        "users": "Wrath, Lust, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Light",
+        "description": "If your craftiness is higher than your target's craftiness, your next attack this turn gains +1 lethality against that target."
+    },
+    "Prepare for the onslaught": {
+        "users": "Greed, Envy, Gluttony",
+        "category": "Combat",
+        "type": "Light",
+        "description": "If you have no invigorated actions left until your next turn for the first attack that you receive, you may add your craftiness to your defense."
+    },
+    "Sharpen": {
+        "users": "Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "Choose one of you items, for the rest of this turn, that item gains +1 Lethality. "
+    },
+    "Firezap! ": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Light",
+        "description": "Make a long ranged attack with 1 lethality. This attack has (Magic Switch)."
+    },
+    "Charge! ": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Light",
+        "description": "During the casting of your next spell this turn, your sin modifier increases by half your current sin connection."
+    },
+    "Heavy Charge!  ": {
+        "users": "Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "During the casting of your next spell this turn, your sin modifier increases your current sin connection."
+    },
+    "Magic Shield": {
+        "users": "Greed, Lust, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat/Reaction ",
+        "type": "Light",
+        "description": "1 per attack; when attacked, you may add half of your sin connection to your defense."
+    },
+    "Magic Bound ": {
+        "users": "Greed, Lust, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat/Reaction ",
+        "type": "Heavy",
+        "description": "When you are attacked, you may give your oponennt's current attack (Magic Switch). (Essentially their current offensive power will become their sin connection stat instead!)"
+    },
+    "Firebolt! ": {
+        "users": "Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "Make a long-ranged attack with 1 lethality. This attack has both (Magic Switch) and (Magic Strength)."
+    },
+    "Blood Bred Sacrifice ": {
+        "users": "Wrath, Sloth, Envy, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "Choose a target, if your sin modifier is higher than that target activate the following ability. You may deal any amount of damage to yourself. If you do, choose an item, and it gains lethality equal to the damage you dealt to yourself on the next attack you perform against the target for this ability. "
+    },
+    "Magic Encoat ": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Light",
+        "description": "Target an item. For this turn, when you attack with that item, if your sin connection is higher than the attack target's attack, that item gains (Magic Strength) until the end of that attack."
+    },
+    "Flight ": {
+        "users": "Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat/Utility",
+        "type": "Heavy",
+        "description": "Choose a target, for one round that target gains (Flight). When those with flight are attacked unless the attacker also has (Flight) or passes a jump check with DC equal to your sin connection, the flying target may add half their craftiness to their defense."
+    },
+    "Sticky feet ": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Utility",
+        "type": "Light",
+        "description": "Your feet may stick to any surface. If you are in an area with walls, you gain (jump)"
+    },
+    "Light ": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Utility",
+        "type": "Light",
+        "description": "Removes the Darkness effect. "
+    },
+    "Scan ": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Utility",
+        "type": "Light",
+        "description": "Choose a target, You may learn the base offensive and defensive power of that target, as well as a slight description."
+    },
+    "Water Breath": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Utility",
+        "type": "Light",
+        "description": "Choose up to 7 targets. Those targets can breathe underwater."
+    },
+    "Jump": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Utility",
+        "type": "Light",
+        "description": "Choose a target, for one round that target gains (Jump). (Those with Jump pass all Jump checks)"
+    },
+    "Magic Body Boost. ": {
+        "users": "Greed, Lust, Sloth, Gluttony",
+        "category": "Combat",
+        "type": "Light",
+        "description": "Choose a target, until the end of the round, that target gains ¼ of your sin connection in either offensive power or defensive power. (your choice). If you are of the Lust class, both are increased."
+    },
+    "Work Up Blood Boil Magic Body Boost. ": {
+        "users": "Lust, Wrath, Gluttony",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "Choose a target, until the end of the round, that target gains ½  of your sin connection in either offensive power or defensive power. (your choice). If you are of the Lust class, both are increased."
+    },
+    "Magical Focus. ": {
+        "users": "Greed, Lust, Wrath, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "1/turn, You may add half of your sin connection to your craftiness until the end of this turn. "
+    },
+    "Magical Hyper Focus. ": {
+        "users": "Lust, Wrath, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Light",
+        "description": "You may add sin connection to your craftiness until the end of this turn. "
+    },
+    "Kings Gust ": {
+        "users": "Lust, Envy, Gluttony, Pride",
+        "category": "Combat/Reaction",
+        "type": "Light",
+        "description": "When you are attacked if your sin connection is greater than your opponent's you may subtract half of your sin connection from their current offensive power. "
+    },
+    "Emeperor's Gust ": {
+        "users": "Lust, Pride",
+        "category": "Combat/Reaction",
+        "type": "Heavy",
+        "description": "When you are attacked if your sin connection is greater than your opponent's you may reduce their offensive power to 0."
+    },
+    "Thunderclap ": {
+        "users": "Wrath, Pride",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "Make a long-ranged attack with 2 lethality. This attack has both (Magic Switch) and (Magic Strength). Then resolve one of the following effects: 1. Take 2 damage 2. You do not reinvigorate this heavy action at the start of your next turn, and until your next turn your base defensive power is halved."
+    },
+    "Invigoration!!! ": {
+        "users": "Lust, Gluttony, ",
+        "category": "Combat/Reaction",
+        "type": "Heavy",
+        "description": "After the resolution of an action, choose a target, If it is that targets' turn reivigorate 1 of their light action. If it is not that target's turn you may reinvigorate 1 heavy action instead. (That reinvigorated heavy action cannot cast invigoration)"
+    },
+    "Magic Slash": {
+        "users": "Greed, Lust, Wrath, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat",
+        "type": "Light",
+        "description": "Make an attack with 1 Lethality. If you used a heavy action to perform this spell it gains (Magic Strength). "
+    },
+    "Instant Transmission": {
+        "users": "Greed, Lust, Sloth, Envy, Gluttony, Pride",
+        "category": "Combat/Reaction",
+        "type": "Light",
+        "description": "Target yourself. If your class is Lust, you may target anyone. If you were to take damage because of an attack that had a difference of 2000 or less between the to-hit stat and the defensive stat, you may reduce the damage you take to 0. If your class is Envy, the difference may be 3000 or less instead. "
+    },
+    "Hatred Wave ": {
+        "users": "Wrath, Sloth, Envy, Gluttony, Pride ",
+        "category": "Combat",
+        "type": "Heavy",
+        "description": "Choose one target, If you class is Envy you may choose two instead. All targets with a sin connection lower than you have their offensive power subtracted by half of you sin connection for this round."
+    }
+}
