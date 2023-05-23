@@ -12,7 +12,6 @@ function createActionHTML(name, type, category, description) {
     `;
 }
 
-// restrict actions to the current class
 async function loadActions(name) {
     let actionsJSON = await fetch("./data/actions.json");
     actionsJSON = await actionsJSON.json();
@@ -22,6 +21,7 @@ async function loadActions(name) {
     actionList.innerHTML = ``;
     for (let actionName in actionsJSON) {
         let action = actionsJSON[actionName];
+        // restrict actions to the current class
         if (action["users"].toLowerCase().includes(name)) {
             let html = createActionHTML(actionName, action["type"], action["category"], action["description"]);
             actionList.insertAdjacentHTML("beforeend", html);
@@ -190,9 +190,6 @@ window.onload = async () => {
 
     document.querySelector("#class-select").addEventListener("change", (e) => changeClass(e.target.value));
     loadClassFromLocal();
-    for (let element of document.querySelectorAll(".action-icon")) {
-        element.addEventListener("click", (e) => toggleAction(e.target));
-    }
 
     document.querySelector("#reinvigorate-button").addEventListener("click", reinvigorate);
 }
