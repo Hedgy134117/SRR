@@ -4,6 +4,7 @@ function createActionHTML(name, type, category, description) {
         <div class="action__name">
             <span class="action__title">${name}</span>
             <img class="action__type" src="img/${type == "Light" ? "LA" : "HA"}.png"></img>
+            <div class="button button__small"><span>+</span></div>
         </div>
         <span class="action__category">${category}</span>
         <span class="action__description">${description}</span>
@@ -23,13 +24,20 @@ async function loadActions() {
         actionList.insertAdjacentHTML("beforeend", html);
     }
 
-    for (let element of document.querySelectorAll(".action")) {
+    for (let element of actionList.querySelectorAll(".action")) {
         element.addEventListener("click", (e) => useAction(e.target));
+    }
+
+    for (let element of actionList.querySelectorAll(".button")) {
+        element.addEventListener("click", (e) => addAction(e.target));
     }
 }
 
 function useAction(actionHTML) {
     while (!actionHTML.classList.contains("action")) {
+        if (actionHTML.classList.contains("button")) {
+            return;
+        }
         actionHTML = actionHTML.parentElement;
     }
 
@@ -51,6 +59,33 @@ function useAction(actionHTML) {
         break;
     }
 }
+
+function addAction(actionHTML) {
+    while (!actionHTML.classList.contains("action")) {
+        actionHTML = actionHTML.parentElement;
+    }
+
+    let myActions = document.querySelectorAll(".action-list")[1]
+    myActions.appendChild(actionHTML);
+
+    actionHTML.querySelector(".button").removeEventListener("click", addAction);
+    actionHTML.querySelector(".button").addEventListener("click", (e) => removeAction(actionHTML));
+    actionHTML.querySelector(".button").querySelector("span").innerText = "-";
+}
+
+function removeAction(actionHTML) {
+    while (!actionHTML.classList.contains("action")) {
+        actionHTML = actionHTML.parentElement;
+    }
+
+    let allActions = document.querySelector(".action-list");
+    allActions.appendChild(actionHTML);
+
+    actionHTML.querySelector(".button").removeEventListener("click", removeAction);
+    actionHTML.querySelector(".button").addEventListener("click", (e) => addAction(actionHTML));
+    actionHTML.querySelector(".button").querySelector("span").innerText = "+";
+}
+
 
 function createActionIconHTML(type) {
     return `<img class="action-icon" src="img/${type == "Light" ? "LA" : "HA"}.png">`;

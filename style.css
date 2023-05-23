@@ -32,8 +32,8 @@ main {
 }
 
 #bottom {
-    padding: 1em;
-    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 #action-bar {
@@ -63,8 +63,10 @@ main {
     cursor: pointer;
 }
 
-#action-list {
+.action-list {
+    padding: 1em;
     justify-self: center;
+    overflow-y: auto;
 }
 
 .action {
@@ -117,6 +119,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button__small {
+    padding: 0.5em;
+    border: 2px solid #733700;
 }
 
 @media only screen and (max-width: 830px) {
