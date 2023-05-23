@@ -12,16 +12,20 @@ function createActionHTML(name, type, category, description) {
     `;
 }
 
-async function loadActions() {
+// restrict actions to the current class
+async function loadActions(name) {
     let actionsJSON = await fetch("./data/actions.json");
     actionsJSON = await actionsJSON.json();
     console.log(actionsJSON);
 
     let actionList = document.querySelector(".action-list");
+    actionList.innerHTML = ``;
     for (let actionName in actionsJSON) {
         let action = actionsJSON[actionName];
-        let html = createActionHTML(actionName, action["type"], action["category"], action["description"]);
-        actionList.insertAdjacentHTML("beforeend", html);
+        if (action["users"].toLowerCase().includes(name)) {
+            let html = createActionHTML(actionName, action["type"], action["category"], action["description"]);
+            actionList.insertAdjacentHTML("beforeend", html);
+        }
     }
 
     for (let element of actionList.querySelectorAll(".action")) {
@@ -132,6 +136,7 @@ function changeClass(name) {
 
     removeClassFromLocal();
     saveClassToLocal(name);
+    loadActions(name);
 }
 
 function loadClassFromLocal() {
