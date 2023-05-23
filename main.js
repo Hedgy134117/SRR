@@ -22,6 +22,34 @@ async function loadActions() {
         let html = createActionHTML(actionName, action["type"], action["category"], action["description"]);
         actionList.insertAdjacentHTML("beforeend", html);
     }
+
+    for (let element of document.querySelectorAll(".action")) {
+        element.addEventListener("click", (e) => useAction(e.target));
+    }
+}
+
+function useAction(actionHTML) {
+    while (!actionHTML.classList.contains("action")) {
+        actionHTML = actionHTML.parentElement;
+    }
+
+    let actionType = null;
+    if (actionHTML.querySelector(".action__type").src.includes("LA.png")) {
+        actionType = "LA";
+    } else {
+        actionType = "HA";
+    }
+
+    for (let actionIcon of document.querySelectorAll(".action-icon")) {
+        if (actionIcon.classList.contains("action-icon__rested")) {
+            continue;
+        }
+        // has to use the actions in order; can't use a HA when the next action is a LA
+        if ((actionIcon.src.includes("LA.png") && actionType == "LA") || (actionIcon.src.includes("HA.png") && actionType == "HA")) {
+            toggleAction(actionIcon);
+        }
+        break;
+    }
 }
 
 function createActionIconHTML(type) {
@@ -50,6 +78,14 @@ function toggleAction(element) {
     element.classList.toggle("action-icon__rested");
 }
 
+function reinvigorate() {
+    for (let actionIcon of document.querySelectorAll(".action-icon")) {
+        if (actionIcon.classList.contains("action-icon__rested")) {
+            toggleAction(actionIcon);
+        }
+    }
+}
+
 window.onload = async () => {
     await loadActions();
 
@@ -60,4 +96,6 @@ window.onload = async () => {
     for (let element of document.querySelectorAll(".action-icon")) {
         element.addEventListener("click", (e) => toggleAction(e.target));
     }
+
+    document.querySelector("#reinvigorate-button").addEventListener("click", reinvigorate);
 }
