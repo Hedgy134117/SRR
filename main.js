@@ -113,6 +113,7 @@ function createActionIconHTML(type) {
 }
 
 let classJSON = null;
+let classes = [];
 function changeClass(name) {
     let actions = classJSON[name].split("");
     let actionBar = document.querySelector("#action-bar")
@@ -127,6 +128,19 @@ function changeClass(name) {
 
     for (let element of document.querySelectorAll(".action-icon")) {
         element.addEventListener("click", (e) => toggleAction(e.target));
+    }
+
+    removeClassFromLocal();
+    saveClassToLocal(name);
+}
+
+function loadClassFromLocal() {
+    for (let val in window.localStorage) {
+        if (val.includes("SRR") && classes.includes(val.split("-")[1])) {
+            let c = val.split("-")[1];
+            changeClass(c);
+            document.querySelector(`option[name=${c}]`).setAttribute("selected", true);
+        }
     }
 }
 
@@ -150,13 +164,27 @@ function removeActionFromLocal(actionName) {
     window.localStorage.removeItem("SRR-" + actionName);
 }
 
+function saveClassToLocal(className) {
+    window.localStorage.setItem("SRR-" + className, "1");
+}
+
+function removeClassFromLocal() {
+    for (let c of classes) {
+        window.localStorage.removeItem("SRR-" + c);
+    }
+}
+
 window.onload = async () => {
     await loadActions();
 
     classJSON = await fetch("./data/classes.json");
     classJSON = await classJSON.json();
+    for (let c in classJSON) {
+        classes.push(c);
+    }
 
     document.querySelector("#class-select").addEventListener("change", (e) => changeClass(e.target.value));
+    loadClassFromLocal();
     for (let element of document.querySelectorAll(".action-icon")) {
         element.addEventListener("click", (e) => toggleAction(e.target));
     }
