@@ -126,6 +126,16 @@ main {
     border: 2px solid #733700;
 }
 
+@media only screen and (max-width: 900px) {
+    .action {
+        display: block;
+    }
+    .action__description {
+        display: block;
+        text-align: left;
+    }
+}
+
 @media only screen and (max-width: 830px) {
     main {
         grid-template-rows: 15% 85%;
@@ -145,14 +155,9 @@ main {
     #top {
         flex-direction: column;
     }
-}
 
-@media only screen and (max-width: 480px) {
-    .action {
-        display: block;
-    }
-    .action__description {
-        display: block;
-        text-align: left;
+    #bottom {
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
     }
 }
