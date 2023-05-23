@@ -56,6 +56,10 @@ main {
     /* margin: 0 1em; */
 }
 
+.action-icon__rested {
+    opacity: 50%;
+}
+
 .action-icon:hover {
     cursor: pointer;
 }
@@ -114,4 +118,25 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 830px) {
+    main {
+        grid-template-rows: 15% 85%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    main {
+        grid-template-rows: 30% 70%;
+    }
+
+    #action-bar {
+        flex-grow: 0;
+        height: 50%;
+    }
+    
+    #top {
+        flex-direction: column;
+    }
 }

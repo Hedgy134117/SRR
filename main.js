@@ -24,6 +24,40 @@ async function loadActions() {
     }
 }
 
+function createActionIconHTML(type) {
+    return `<img class="action-icon" src="img/${type == "Light" ? "LA" : "HA"}.png">`;
+}
+
+let classJSON = null;
+function changeClass(name) {
+    let actions = classJSON[name].split("");
+    let actionBar = document.querySelector("#action-bar")
+    actionBar.innerHTML = '';
+    for (let action of actions) {
+        if (action == "L") {
+            actionBar.insertAdjacentHTML("beforeend", createActionIconHTML("Light"));
+        } else {
+            actionBar.insertAdjacentHTML("beforeend", createActionIconHTML("Heavy"));
+        }
+    }
+
+    for (let element of document.querySelectorAll(".action-icon")) {
+        element.addEventListener("click", (e) => toggleAction(e.target));
+    }
+}
+
+function toggleAction(element) {
+    element.classList.toggle("action-icon__rested");
+}
+
 window.onload = async () => {
     await loadActions();
+
+    classJSON = await fetch("./data/classes.json");
+    classJSON = await classJSON.json();
+
+    document.querySelector("#class-select").addEventListener("change", (e) => changeClass(e.target.value));
+    for (let element of document.querySelectorAll(".action-icon")) {
+        element.addEventListener("click", (e) => toggleAction(e.target));
+    }
 }
